@@ -1,0 +1,11 @@
+Flask
+Flask-SQLAlchemy
+Flask-Login
+Flask-Cors
+numpy
+opencv-python
+dlib
+pyttsx3
+scipy
+requests
+Werkzeug

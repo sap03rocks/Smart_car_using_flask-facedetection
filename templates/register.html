@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/png" href="/static/favicon.ico">
+    <style>
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+        }
+        .input-group label {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .input-group input {
+            font-size: 1.2rem;
+            padding: 10px;
+            width: 100%;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .password-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .password-container input {
+            flex: 1;
+        }
+        .password-container button {
+            font-size: 1rem;
+            margin-left: 10px;
+            padding: 5px;
+            background: none;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .button {
+            font-size: 1.5rem;
+            padding: 15px 50px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>User Registration</h1>
+        <div class="card">
+            <form action="/register" method="POST" class="form-container">
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname" name="surname" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">Password:</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" required>
+                        <button type="button" onclick="togglePassword('password')">👁️</button>
+                    </div>
+
+                    <label for="confirm-password">Confirm Password:</label>
+                    <div class="password-container">
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <button type="button" onclick="togglePassword('confirm-password')">👁️</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="button">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(fieldId) {
+            const field = document.getElementById(fieldId);
+            field.type = field.type === "password" ? "text" : "password";
+        }
+    </script>
+</body>
+</html>

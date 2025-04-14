@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="/static/favicon.ico">
+    <title>Admin Login</title>
+    <style>
+        body {
+            background-color: #b3c7f7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .login-box {
+            background-color: white;
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 450px;
+        }
+
+        .login-box h2 {
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1em;
+            margin: 15px 0 5px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #eef3ff;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 100%;
+            height: 50px;
+            font-size: 1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            display: block;
+            margin-top: 20px;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .login-btn {
+            background-color: #1a1a6d;
+            color: white;
+        }
+
+        .login-btn:hover {
+            background-color: #00004d;
+        }
+
+        .register-btn {
+            background-color: #ff471a;
+            color: white;
+        }
+
+        .register-btn:hover {
+            background-color: #cc3300;
+        }
+        .user-link {
+        margin-top: 15px;
+        display: block;
+        font-size: 0.95em;
+        color: #4b0082;
+        text-decoration: none;
+        }
+
+        .user-link:hover {
+        text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Admin Login</h2>
+        <form method="POST">
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
+
+            <label for="email">email:</label>
+            <input type="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+
+            <button type="submit" class="btn login-btn">Login</button>
+        </form>
+
+        <a href="/admin_registration" class="btn register-btn">New Admin? Register Here</a>
+        <a href="/login" class="user-link">Are you an user? Click here</a>
+    </div>
+</body>
+</html>

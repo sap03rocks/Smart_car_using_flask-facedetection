@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="icon" type="image/png" href="/static/favicon.ico">
+  <style>
+    body {
+      background-color: #b3c7f7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background-color: white;
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 450px;
+    }
+
+    .login-box h2 {
+      margin-bottom: 30px;
+      font-size: 2.2em;
+    }
+
+    label {
+      display: block;
+      font-size: 1.1em;
+      margin: 15px 0 5px;
+      text-align: left;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 14px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #eef3ff;
+    }
+
+    .btn {
+      width: 100%;
+      height: 50px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      display: block;
+      text-align: center;
+      line-height: 50px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    .login-btn {
+      background-color: #1a1a6d;
+      color: white;
+    }
+
+    .login-btn:hover {
+      background-color: #00004d;
+    }
+
+    .register-btn {
+      background-color: #ff471a;
+      color: white;
+    }
+
+    .register-btn:hover {
+      background-color: #cc3300;
+    }
+
+    .admin-link {
+      margin-top: 15px;
+      display: block;
+      font-size: 0.95em;
+      color: #4b0082;
+      text-decoration: none;
+    }
+
+    .admin-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form method="POST">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <button class="btn login-btn" type="submit">Login</button>
+    </form>
+
+    <a class="btn register-btn" href="/register">New User? Register Now</a>
+    <a href="/admin_login" class="admin-link">Are you an admin? Click here</a>
+  </div>
+</body>
+</html>

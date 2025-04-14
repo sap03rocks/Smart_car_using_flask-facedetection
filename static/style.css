@@ -1,0 +1,102 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: rgb(170, 193, 250);
+  margin: 0;
+}
+h1 {
+font-size: 1.8rem;
+color: white;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #191970;
+}
+.content {
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.card {
+  background-color: #dbe1ff;
+  box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, .5);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 50px;
+}
+
+
+
+
+.button {
+  padding: 15px 50px;
+  font-size: 24px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  outline: none;
+  color: #fff;
+  background-color: #191970;
+  border: none;
+  border-radius: 5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.button:active {
+  background-color: #4949f1;
+  box-shadow: 2 2px #CDCDCD;
+  transform: translateY(2px);
+}
+.state {
+  font-size: 1rem;
+  color: #dbe1ff;
+  font-weight: bold;
+}
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.up-down-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.spacer {
+  height: 40px;
+}
+#mapid {
+  height: 400px; /* Adjusted height */
+  width: 400px;
+  margin: 0 auto; /* Center horizontally */
+  display: flex; /* Added */
+  justify-content: center; /* Added */
+  margin-bottom: 20px; /* Added margin */
+}
+
+.logout-button {
+  background-color: #f44336; /* Red */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f; /* Darker red when mouse is over it */
+}
+
+.logout-button:active {
+  background-color: #b71c1c; /* Even darker red when button is clicked */
+}

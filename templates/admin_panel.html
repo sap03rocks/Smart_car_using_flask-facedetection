@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Registered Users</title>
+    <link rel="icon" type="image/png" href="/static/favicon.ico">
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            background-color: rgb(170, 193, 250);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, .5);
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #191970;
+            padding: 15px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .button {
+            padding: 15px 50px;
+            font-size: 24px;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            outline: none;
+            color: #fff;
+            background-color: #191970;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+        }
+        .button:active {
+            background-color: #4949f1;
+            transform: translateY(2px);
+        }
+        .logout-button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #f44336;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .logout-button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <h1>Admin Panel</h1>
+    </div>
+    <div class="container">
+        <h2>Registered Users</h2>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Last Location</th>
+                <th>Last Updated At</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.surname }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    {% if user.lastlocation_url %}
+                        <a href="{{ user.lastlocation_url }}" target="_blank">{{ user.lastlocation_url }}</a>
+                    {% else %}
+                        Not Available
+                    {% endif %}
+                </td>
+                <td>
+                    {% if user.location_updated_at %}
+                        {{ user.location_updated_at.strftime("%B %d, %Y – %I:%M %p") }}
+                    {% else %}
+                        Not Available
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <!-- New Intruder Log Button -->
+        <div>
+            <a href="/intruders" class="button">View Intruder Log</a>
+        </div>
+
+        <!-- Logout Button -->
+        <div>
+            <a href="/logout" class="logout-button">LOGOUT</a>
+        </div>
+    </div>
+</body>
+</html>

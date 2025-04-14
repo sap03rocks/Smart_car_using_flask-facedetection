@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>ESP Web Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css" /> 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> 
+  <link rel="icon" type="image/png" href="/static/favicon.ico"> 
+
+</head>
+<body>
+  <div class="topnav">
+    <h1>ESP WebSocket Server</h1>
+  </div>
+  <div class="content">
+    <div class="card">
+      <div class="up-down-buttons">
+    
+        <button id="button3" class="button">Up</button>
+       
+      </div>
+      <div class="button-container">
+        <button id="button" class="button">Left</button>
+        <button id="button2" class="button">Right</button>
+      </div>
+      <div class="spacer"></div>
+      <div class="up-down-buttons">
+        <button id="button4" class="button">Down</button>
+      </div>
+      <div><p><button id="getLocation" class="button">Location</button></p></div>
+      <div><p><button id="stopMovement" class="button">Stop</button></p></div>
+      <div><p><button id="panic" class="button">PANIC</button></p></div>
+      <div><a href="/logout" id="logout" class="logout-button">LOGOUT</a></div>
+
+    </div>
+  </div>
+  <div id="mapid"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="/static/script.js">
+    
+  </script>
+</body>
+</html>
